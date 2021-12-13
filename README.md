@@ -2,14 +2,13 @@
 
 ## USER STORY
 
-AS AN avid traveler
+- AS AN often spender
 I WANT to be able to track my withdrawals and deposits with or without a data/internet connection
-SO THAT my account balance is accurate when I am traveling 
-Acceptance Criteria
+SO THAT my account balance is accurate when I am spending money.
 
 ## DESCRIPTION
 
-We want a site that allows users to track budget and expenses, online and offline.
+- We want a site that allows users to track budget and expenses, online and offline.
 
 ## FINAL PRODUCT
 
@@ -29,7 +28,7 @@ We want a site that allows users to track budget and expenses, online and offlin
 
 ## ROADMAP
 
-See the issues (GitHub) for a list of proposed changes.
+- See the issues (GitHub) for a list of proposed changes.
 
 ## AUTHORS
 
