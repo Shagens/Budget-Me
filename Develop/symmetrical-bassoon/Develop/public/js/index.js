@@ -6,9 +6,12 @@ let db;
 var request = indexedDB.open("Budget", 1);
 
 request.onerror = function(event) {
+  console.error("openDb:", evt.target.errorCode);
   // Do something with request.errorCode!
 };
 request.onsuccess = function(event) {
+  db = event.target.result;
+  console.log("openDb DONE");
   // Do something with request.result!
 };
 
