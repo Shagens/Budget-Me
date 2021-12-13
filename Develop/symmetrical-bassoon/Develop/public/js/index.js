@@ -14,11 +14,24 @@ request.onsuccess = function(event) {
 
 request.onupgradeneeded = (event) => {
 var store = evt.currentTarget.result.createObjectStore(
-  "transaction",  {autoIncrement: true} 
-);
+  "transaction",  {autoIncrement: true} );
+  db.transaction("transacton", 'readwrite').createObjectStore("transaction");
+
 }
 
-saveRecord(transaction);
+function saveRecord(transaction){
+  let action = db.transaction("transaction", 'readwrite').objectStore("transaction");
+
+  let result = action.add(transaction);
+
+  result.onerror = function(){
+    console.log("err")
+  }
+  result.onsuccess = function(){
+    console.log("success")
+  }
+
+}
 
 fetch("/api/transaction")
   .then(response => {
