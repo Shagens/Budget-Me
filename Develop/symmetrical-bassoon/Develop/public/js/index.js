@@ -12,7 +12,13 @@ request.onsuccess = function(event) {
   // Do something with request.result!
 };
 
+request.onupgradeneeded = (event) => {
+var store = evt.currentTarget.result.createObjectStore(
+  "transaction",  {autoIncrement: true} 
+);
+}
 
+saveRecord(transaction);
 
 fetch("/api/transaction")
   .then(response => {
